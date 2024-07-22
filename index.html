@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images with Labels</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.image-container p {
+  font-weight: bold;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Images and Labels</h1>
+    <section class="image-container">
+      <img src="Tempestade.jpeg" alt="Label 1">
+      <p id="label1">The image depicts a large storm cloud moving over a field of wheat. The storm clouds are very dark and ominous, and they look like they are about to bring a powerful downpour. The wheat in the foreground is still green and lush, but it will likely be flattened by the strong winds and heavy rain that is on its way. The scene captures the power and potential destructiveness of nature.</p>
+    </section>
+    <section class="image-container">
+      <img src="Cat.jpeg" alt="Label 2">
+      <p id="label2">The cat in the image is a tabby cat with piercing green eyes. It is standing alert with its ears perked up, suggesting it is curious about something just out of frame. The cat’s fur is a mixture of brown, black, and white, with stripes running down its back and across its forehead. The shallow depth of field blurs the background, placing all the emphasis on the cat and its captivating gaze.</p>
+    </section>
+    <section class="image-container">
+      <img src="Sea.jpeg" alt="Label 3">
+      <p id="label3">The image depicts a dramatic scene of a storm brewing on the horizon. Ominous dark clouds billow and roll across the sky, casting long shadows across a vast field of golden wheat. In the distance, a solitary dirt path winds its way through the field, eventually disappearing into the hazy distance. The scene is a powerful contrast between the golden hues of the wheat and the dark, foreboding clouds, creating a sense of anticipation and tension. It's a calm before the storm moment, where the beauty of nature exists uneasily with the approaching power of the weather.</p>
+    </section>
+    <section class="image-container">
+      <img src="Goku.jpeg" alt="Label 4">
+      <p id="label4">Anime Legend</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    const labels = document.querySelectorAll('main p');
+
+labels.forEach(label => {
+  label.addEventListener('mouseover', () => {
+    label.style.color = 'blue'; // Change to desired hover color
+  });
+
+  label.addEventListener('mouseout', () => {
+    label.style.color = 'black'; // Change to desired default color
+  });
+});
+
+  </script>
+  <h1>Site Criado Por Isllan</h1>
+</body>
+</html>
